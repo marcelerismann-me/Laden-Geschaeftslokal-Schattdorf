@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gewerbeimmobilie zur Vermietung in Schattdorf - 166 m² Gewerbefläche mit Laden, Werkstatt, Büro und Garage. CHF 1'800.- pro Monat.">
+    <meta name="keywords" content="Gewerbeimmobilie, Vermietung, Schattdorf, Uri, Laden, Werkstatt, Garage, CHF 1800">
+    <title>Gewerbeimmobilie Schattdorf - Zu vermieten ab Juni 2026</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2E5C8A;
+            --secondary-color: #4A7BA7;
+            --light-bg: #E8F0F7;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .header .highlights {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--light-bg);
+        }
+
+        .section h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .info-card .label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card .value {
+            color: var(--text-color);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .gallery {
+            margin: 2rem 0;
+        }
+
+        .gallery h3 {
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .price-highlight .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .price-highlight .price-details {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .contact-box {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-bg);
+        }
+
+        .floor-plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .floor-plan-item {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+
+        .floor-plan-item .area-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .floor-plan-item .area-size {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            margin: 0.5rem 0;
+        }
+
+        /* Lightbox for images */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Gewerbeimmobilie zur Vermietung</h1>
+        <div class="subtitle">Baumgärtli 8, 6467 Schattdorf</div>
+        <div class="highlights">Primäre Lage im Dorfkern • 166 m² Gewerbefläche • 4 Parkplätze</div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Image -->
+        <img src="Bilder/jpg/IMG_7285.jpg" alt="Aussenansicht Gewerbeimmobilie Schattdorf" class="hero-image">
+
+        <!-- Objektübersicht -->
+        <div class="section">
+            <h2>Objektübersicht</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="label">Adresse</div>
+                    <div class="value">Baumgärtli 8, 6467 Schattdorf (Kanton Uri)</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Lage</div>
+                    <div class="value">Direkt an der Dorfstrasse/Hauptstrasse im Dorfkern</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Gesamtfläche</div>
+                    <div class="value">ca. 166 m²</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Verfügbar ab</div>
+                    <div class="value">1. Juni 2026</div>
+                </div>
+                <div class="info-card">
+                    <div class="label">Parkplätze</div>
+                    <div class="value">4 Parkplätze (2 vor Laden, 2 bei Werkstatt)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mietpreis -->
+        <div class="price-highlight">
+            <div>Mietzins</div>
+            <div class="price">CHF 1'800.– / Monat</div>
+            <div class="price-details">
+                Nebenkosten nach Aufwand (exkl.) • Kaution: CHF 5'400.– (3 Monatsmieten)
+            </div>
+        </div>
+
+        <!-- Flächenaufteilung -->
+        <div class="section">
+            <h2>Flächenaufteilung</h2>
+            <div class="floor-plan-grid">
+                <div class="floor-plan-item">
+                    <div class="area-name">Ladengeschäft</div>
+                    <div class="area-size">81 m²</div>
+                    <div class="area-detail" style="font-size: 0.85rem; color: var(--light-text); margin-top: 0.3rem;">Raumhöhe 2.70 m</div>
+                </div>
+                <div class="floor-plan-item">
+                    <div class="area-name">Lager/Werkstatt</div>
+                    <div class="area-size">45 m²</div>
+                </div>
+                <div class="floor-plan-item">
+                    <div class="area-name">Garage</div>
+                    <div class="area-size">23 m²</div>
+                    <div class="area-detail" style="font-size: 0.85rem; color: var(--light-text); margin-top: 0.3rem;">Mit Wasseranschluss</div>
+                </div>
+                <div class="floor-plan-item">
+                    <div class="area-name">Büro</div>
+                    <div class="area-size">17 m²</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Objektbeschreibung -->
+        <div class="section">
+            <h2>Objektbeschreibung</h2>
+            <p style="margin-bottom: 1rem;">
+                Diese vielseitige Gewerbeimmobilie befindet sich in bester Lage direkt an der Hauptstrasse im
+                Dorfkern von Schattdorf. Das Objekt wurde über 35 Jahre als erfolgreiches Multimedia-Geschäft geführt
+                und anschliessend weitere 13 Jahre vermietet. Die grosszügigen Räumlichkeiten eignen sich ideal für
+                Einzelhandel, Dienstleistungen oder Handwerksbetriebe.
+            </p>
+            <p>
+                Die moderne Ausstattung mit Loxone Smart-Home-System, LED-Beleuchtung und die vorbereitete E-Auto-Ladestation
+                machen dieses Objekt besonders zukunftsorientiert. Die hervorragende Verkehrsanbindung und Sichtbarkeit
+                garantieren optimale Kundenerreichbarkeit.
+            </p>
+        </div>
+
+        <!-- Ausstattung -->
+        <div class="section">
+            <h2>Ausstattung & Features</h2>
+
+            <h3>Ladengeschäft (81 m², Raumhöhe 2.70 m)</h3>
+            <ul class="features-list">
+                <li>Schöne Aluprofildecke</li>
+                <li>Schaufenster mit Ausstellfläche für optimale Produktpräsentation</li>
+                <li>Moderne LED- und Leuchtstoff-Beleuchtung</li>
+                <li>Hochwertige Verkaufswände mit Tablaren an Stirn- und Innenseite</li>
+                <li>Loxone Smart-Home-System für Beleuchtungssteuerung</li>
+                <li>Automatische Sonnenstoren mit Helligkeitssensoren</li>
+                <li>2 Leuchtreklamen (grosse Reklame mit Elektro Nauer umgebaut)</li>
+            </ul>
+
+            <h3>Lager/Werkstatt (45 m²)</h3>
+            <ul class="features-list">
+                <li>Grosszügiger Arbeitsbereich</li>
+                <li>Industrieteppich-Bodenbelag</li>
+                <li>Direkter Zugang zur Garage</li>
+                <li>Satellitenanlage vorhanden</li>
+                <li>Separate Toilette</li>
+            </ul>
+
+            <h3>Garage & Technik (23 m²)</h3>
+            <ul class="features-list">
+                <li>Separate Garage mit Wasseranschluss</li>
+                <li>Sockel für Wäscheturm vorhanden</li>
+                <li>E-Auto-Ladestation: Anschluss vorbereitet (nach Vereinbarung)</li>
+                <li>Elektrisches Garagentor</li>
+                <li>Optionale Zusatz-Garage (sehr geräumig, separat zumietbar)</li>
+            </ul>
+
+            <h3>Büro & Sicherheit (17 m²)</h3>
+            <ul class="features-list">
+                <li>17 m² Bürofläche mit verbautem Wandregal</li>
+                <li>Parkettboden und separate Fensterstoren</li>
+                <li>Alarmanlage installiert</li>
+                <li>Sichere Lage im Dorfkern</li>
+            </ul>
+        </div>
+
+        <!-- Bildergalerie -->
+        <div class="section">
+            <h2>Impressionen</h2>
+
+            <div class="gallery">
+                <h3>Aussenansicht & Eingang</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7283.jpg')">
+                        <img src="Bilder/jpg/IMG_7283.jpg" alt="Garagentor">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7284.jpg')">
+                        <img src="Bilder/jpg/IMG_7284.jpg" alt="Aussenansicht 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7285.jpg')">
+                        <img src="Bilder/jpg/IMG_7285.jpg" alt="Aussenansicht 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7286.jpg')">
+                        <img src="Bilder/jpg/IMG_7286.jpg" alt="Aussenansicht 3">
+                    </div>
+                </div>
+
+                <h3>Ladengeschäft - Innenansichten</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7287.jpg')">
+                        <img src="Bilder/jpg/IMG_7287.jpg" alt="Laden Innen 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7288.jpg')">
+                        <img src="Bilder/jpg/IMG_7288.jpg" alt="Laden Innen 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7289.jpg')">
+                        <img src="Bilder/jpg/IMG_7289.jpg" alt="Laden Innen 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7290.jpg')">
+                        <img src="Bilder/jpg/IMG_7290.jpg" alt="Laden Innen 4">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7291.jpg')">
+                        <img src="Bilder/jpg/IMG_7291.jpg" alt="Laden Innen 5">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7292.jpg')">
+                        <img src="Bilder/jpg/IMG_7292.jpg" alt="Laden Innen 6">
+                    </div>
+                </div>
+
+                <h3>Büro</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7296.jpg')">
+                        <img src="Bilder/jpg/IMG_7296.jpg" alt="Büro 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7297.jpg')">
+                        <img src="Bilder/jpg/IMG_7297.jpg" alt="Büro 2">
+                    </div>
+                </div>
+
+                <h3>Lager/Werkstatt & Garage</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7298.jpg')">
+                        <img src="Bilder/jpg/IMG_7298.jpg" alt="Werkstatt 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7299.jpg')">
+                        <img src="Bilder/jpg/IMG_7299.jpg" alt="Werkstatt 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7300.jpg')">
+                        <img src="Bilder/jpg/IMG_7300.jpg" alt="Werkstatt 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Bilder/jpg/IMG_7301.jpg')">
+                        <img src="Bilder/jpg/IMG_7301.jpg" alt="Garage 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lage -->
+        <div class="section">
+            <h2>Lage & Verkehrsanbindung</h2>
+            <p style="margin-bottom: 1rem;">
+                Schattdorf ist eine lebendige Gemeinde im Kanton Uri mit rund 5'300 Einwohnern und liegt verkehrsgünstig
+                an der Hauptachse zwischen Altdorf und Erstfeld. Die Immobilie befindet sich direkt an der Dorfstrasse im
+                Zentrum und profitiert von hoher Frequenz und optimaler Sichtbarkeit.
+            </p>
+
+            <!-- Google Maps -->
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.234567890123!2d8.6345!3d46.8567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDUxJzI0LjEiTiA4wrAzOCcwNC4yIkU!5e0!3m2!1sde!2sch!4v1234567890123!5m2!1sde!2sch&q=Baumgärtli+8,+6467+Schattdorf,+Schweiz"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="text-align: center; margin: 1rem 0; color: var(--light-text); font-size: 0.95rem;">
+                📍 <strong>Baumgärtli 8, 6467 Schattdorf</strong> - Direkt an der Hauptstrasse im Dorfkern
+            </p>
+
+            <h3>Erreichbarkeit</h3>
+            <ul class="features-list">
+                <li>Direkte Lage an der Hauptstrasse (Gotthardachse)</li>
+                <li>Ausgezeichnete Sichtbarkeit für Passanten und Autofahrer</li>
+                <li>Sehr gute öffentliche Verkehrsanbindung</li>
+                <li>Zentrale Lage im Dorfkern von Schattdorf</li>
+                <li>Nur wenige Minuten von Altdorf (Kantonshauptort) entfernt</li>
+            </ul>
+
+            <h3>Infrastruktur</h3>
+            <ul class="features-list">
+                <li>Einkaufsmöglichkeiten in unmittelbarer Nähe</li>
+                <li>Restaurants und Cafés im Dorfkern</li>
+                <li>Banken und Post in Gehdistanz</li>
+                <li>Schulen und Kindergärten vorhanden</li>
+                <li>Hervorragende Naherholungsgebiete</li>
+            </ul>
+        </div>
+
+        <!-- Kontakt -->
+        <div class="section">
+            <h2>Kontakt & Besichtigung</h2>
+            <p style="margin-bottom: 1.5rem;">
+                Interessiert? Wir freuen uns auf Ihre Kontaktaufnahme und vereinbaren gerne einen Besichtigungstermin mit Ihnen.
+            </p>
+
+            <div class="contact-box">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">👤</span>
+                        <div>
+                            <strong>Eigentümer:</strong><br>
+                            Bruno Erismann<br>
+                            Marcel Erismann
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <div>
+                            <strong>Telefon:</strong><br>
+                            <a href="tel:+41797398976" style="color: var(--primary-color); text-decoration: none;">079 739 89 76</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <strong>E-Mail:</strong><br>
+                            <a href="mailto:marcelerismann@gmail.com" style="color: var(--primary-color); text-decoration: none;">marcelerismann@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:+41797398976" class="btn">📱 Jetzt anrufen</a>
+                    <a href="mailto:marcelerismann@gmail.com?subject=Anfrage%20Gewerbeimmobilie%20Schattdorf&body=Guten%20Tag%2C%0A%0AIch%20interessiere%20mich%20f%C3%BCr%20die%20Gewerbeimmobilie%20in%20Schattdorf%20und%20m%C3%B6chte%20gerne%20einen%20Besichtigungstermin%20vereinbaren.%0A%0AFreundliche%20Gr%C3%BCsse" class="btn btn-secondary">✉️ E-Mail senden</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Gewerbeimmobilie Baumgärtli 8, 6467 Schattdorf</strong></p>
+        <p>Verfügbar ab 1. Juni 2026 • CHF 1'800.– / Monat</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Erstellt im Februar 2026 • Alle Angaben ohne Gewähr • Änderungen und Irrtümer vorbehalten
+        </p>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Vergrössertes Bild">
+    </div>
+
+    <script>
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
